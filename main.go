@@ -3,10 +3,13 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"rangguy/backend-api/config"
+	"rangguy/backend-api/database"
 )
 
 func main() {
 	config.LoadEnv()
+
+	database.InitDB()
 
 	router := gin.Default()
 
